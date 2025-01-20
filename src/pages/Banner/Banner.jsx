@@ -1,5 +1,6 @@
 import React from "react";
 import "./banner.css";
+
 import useFetch from "../../hooks/useFetch";
 import bgImg from "../../images/bg-transformer.jpg";
 import MovieContent from "../../components/movieContent/movieContent";
@@ -11,6 +12,7 @@ export default function Banner() {
     "http://localhost:5173/data/movieData.json"
   );
   return (
+   
     <div className="banner">
       <div className="movie">
         {error && <div>{error}</div>}
@@ -19,19 +21,22 @@ export default function Banner() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-6 col-md-12">
-             <MovieContent/>
+              <MovieContent />
             </div>
             <div className="col-lg-6 col-md-12">
-             <MovieDate/>
-            <Playbtn/>
+              <MovieDate />
+              <Playbtn />
             </div>
           </div>
         </div>
       </div>
-      {
-        movie &&movie.length>0 &&
-      <MovieSwiper slides={movie}/>
-      }
+      
+      {movie && movie.length > 0 && <MovieSwiper slides={movie} />}
+      
     </div>
+  
+
+    
+   
   );
 }
