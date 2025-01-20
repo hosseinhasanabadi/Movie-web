@@ -1,9 +1,9 @@
 import React from 'react'
 import './movieDate.css'
-export default function MovieDate() {
+export default function MovieDate({movie}) {
   return (
-    <div className="date active">
-    <h2>0n 15h August</h2>
+    <div className={` date ${movie.active ?'active':undefined }`}>
+    <h2>On {movie.date}</h2>
   </div>
   )
 }

@@ -3,23 +3,20 @@ import './movieContent.css'
 import titleImg from "../../images/transformer-title.png";
 import Button from '../Button/Button';
 
-function movieContent() {
+function movieContent({movie}) {
   return (
-    <div className="cotent active">
-    <img src={titleImg} alt="movie Title" className="movie-title" />
+    <div className={`cotent ${movie.active ? 'active':undefined }`}>
+    <img src={movie.titleImg} alt="movie Title" className="movie-title" />
     <h4>
-      <span>Year</span>
+      <span>{movie.year}</span>
       <span>
-        <i>age</i>
+        <i>{movie.ageLimit}</i>
       </span>
-      <span>length</span>
-      <span>category</span>
+      <span>{movie.length}</span>
+      <span>{movie.category}</span>
     </h4>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-      autem sequi non nulla at itaque nihil officia, ipsam eligendi
-      aspernatur libero veniam magnam ex optio, soluta odio eos sunt
-      voluptates?
+     {movie.description}
     </p>
     <div className="button">
      

@@ -15,5 +15,5 @@ export default function useFetch(url) {
         )
     },[])
    
-    return {movie,ispending,error}
+    return {movie,ispending,error,setMovie}
 }
