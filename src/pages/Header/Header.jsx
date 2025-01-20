@@ -3,6 +3,7 @@ import NavListItem from "../../components/navListItem/NavListItem";
 import navListData from "../../data/navListData";
 import './Header.css'
 import Search from "../../components/Search/Search";
+import Button from "../../components/Button/Button";
 
 export default function Header() {
   return (
@@ -18,6 +19,7 @@ export default function Header() {
     }
       </ul>
       <Search/>
+      <Button icon={<i class="fa-solid fa-right-to-bracket"></i>} name='Sign in'/>
     </header>
   );
 }
